@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: t3code
+storage:
+  dataRoot: data
+category: developer
+name: T3 Code
+version: "0.1.7"
+tagline: Control your coding agents from a browser
+description: >-
+  T3 Code is a control surface for coding agents such as Claude, Codex, and
+  OpenCode. This package auto-pairs whoever first reaches its web UI behind
+  Umbrel's login, so no terminal access is needed.
+
+
+  Keep Umbrel's app login enabled: the launcher mints a pairing code on the
+  first visit to the root path and this app exposes terminal and agent access.
+releaseNotes: ""
+developer: T3 Tools
+website: https://t3.codes
+dependencies: []
+repo: https://github.com/pingdotgg/t3code
+support: https://github.com/pingdotgg/t3code/discussions
+port: 30033
+gallery: []  # TODO: Umbrel team adds gallery images before merge
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: TODO  # TODO: contributor name
+submission: TODO  # TODO: pull request URL after submission

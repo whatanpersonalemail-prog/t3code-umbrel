@@ -1,0 +1,18 @@
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: t3code_app_1
+      APP_PORT: 3000
+
+  app:
+    # TODO: replace OWNER/version/digest after the GitHub Actions build.
+    image: ghcr.io/OWNER/t3code-umbrel:v0.1.7@sha256:TODO_DIGEST
+    restart: on-failure
+    init: true
+    environment:
+      HOME: /home/t3code
+    volumes:
+      - ${APP_DATA_DIR}/data/home:/home/t3code
+      - ${APP_DATA_DIR}/data/projects:/workspace
+    working_dir: /workspace
