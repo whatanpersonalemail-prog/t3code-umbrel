@@ -15,11 +15,12 @@ RUN npm install -g \
 COPY launcher.mjs /opt/t3code/launcher.mjs
 
 RUN chmod +x /opt/t3code/launcher.mjs \
-  && (id -u t3code >/dev/null 2>&1 || useradd -m -d /home/t3code -s /bin/bash t3code)
+  && mkdir -p /home/t3code \
+  && chown -R 1000:1000 /home/t3code
 
 ENV HOME=/home/t3code
 WORKDIR /home/t3code
-USER t3code
+USER 1000:1000
 
 EXPOSE 3000
 ENTRYPOINT ["node", "/opt/t3code/launcher.mjs"]
