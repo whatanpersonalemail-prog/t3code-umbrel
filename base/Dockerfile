@@ -9,7 +9,10 @@ RUN apt-get update \
 
 # T3 Code CLI. Pin to a released version (override with --build-arg).
 ARG T3_VERSION=0.1.7
-RUN npm install -g "t3@${T3_VERSION}"
+RUN npm install -g \
+  t3@0.1.7 \
+  @anthropic-ai/claude-code@2.1.319 \
+  @openai/codex
 
 RUN useradd -m -d /home/t3code -s /bin/bash t3code
 WORKDIR /home/t3code
