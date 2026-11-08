@@ -6,8 +6,7 @@ services:
       APP_PORT: 3000
 
   app:
-    # TODO: replace OWNER/version/digest after the GitHub Actions build.
-    image: ghcr.io/OWNER/t3code-umbrel:v0.1.7@sha256:TODO_DIGEST
+    image: ghcr.io/whatanpersonalemail-prog/t3code-umbrel:0.1.7@sha256:7a409d7e53587a9fa50f9593f3fa289d391fab253f5ea6b6acd15ce553f83ad8
     restart: on-failure
     init: true
     environment:
