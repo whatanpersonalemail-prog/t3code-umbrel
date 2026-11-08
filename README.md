@@ -34,6 +34,7 @@ or manual dispatch.
 To build locally instead:
 
     docker build --build-arg BASE_IMAGE=node:22-bookworm -t t3code-umbrel .
+    mkdir -p ./home && sudo chown -R 1000:1000 ./home
     docker run -p 3000:3000 -v ./home:/home/t3code t3code-umbrel
 
 The base image must provide Node and the `t3` CLI (and the agent CLIs you want).
@@ -41,6 +42,7 @@ See `base/` for a minimal base build.
 
 ## Test locally
 
+    mkdir -p ./home && sudo chown -R 1000:1000 ./home
     docker run -p 3000:3000 -v ./home:/home/t3code t3code-umbrel
     # open http://localhost:3000 and confirm you land in T3 already paired
 
