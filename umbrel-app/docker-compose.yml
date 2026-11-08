@@ -6,7 +6,7 @@ services:
       APP_PORT: 3000
 
   app:
-    image: ghcr.io/whatanpersonalemail-prog/t3code-umbrel:0.1.7@sha256:7a409d7e53587a9fa50f9593f3fa289d391fab253f5ea6b6acd15ce553f83ad8
+    image: ghcr.io/whatanpersonalemail-prog/t3code-umbrel:0.1.7@sha256:a04b05c6b030d97c7e35153333354dad08a93115030670071d505253b73b18a3
     restart: on-failure
     init: true
     environment:
